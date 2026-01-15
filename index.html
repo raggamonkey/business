@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YO Certification Coaching - Your Path to IT Success</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .cert-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-purple-600">YO Cert Coaching</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition">About</a>
+                    <a href="#certifications" class="text-gray-700 hover:text-purple-600 transition">Certifications</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-purple-600 transition">Pricing</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
+                    <button onclick="showLoginModal()" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">Admin Login</button>
+                </div>
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded">About</a>
+                <a href="#certifications" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded">Certifications</a>
+                <a href="#pricing" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded">Pricing</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded">Contact</a>
+                <button onclick="showLoginModal()" class="w-full text-left px-3 py-2 text-purple-600 hover:bg-purple-50 rounded">Admin Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Your Path to IT Certification Success</h1>
+            <p class="text-xl md:text-2xl mb-8 text-purple-100">Expert in Microsoft Fundamentals • CompTIA & Cisco Support</p>
+            <p class="text-lg mb-8 text-purple-100">Personalized certification roadmaps to guide your IT career journey</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition text-lg">Start Your Journey</a>
+                <a href="#certifications" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition text-lg">Explore Certifications</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Your Coach</h2>
+                <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Hi, I'm Yilano!</h3>
+                    <p class="text-gray-600 mb-4">I specialize in Microsoft Fundamentals certifications and provide expert guidance for CompTIA and Cisco certification paths. My passion is helping IT professionals find and achieve their ideal certification goals.</p>
+                    <p class="text-gray-600 mb-4">My coaching approach starts with understanding your interests and career aspirations. Together, we'll create a personalized certification roadmap that aligns with your goals, and I'll guide you through every step of your learning journey.</p>
+                    <div class="mt-6">
+                        <h4 class="font-semibold text-gray-800 mb-2">What I Offer:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-600">
+                                <svg class="w-5 h-5 text-purple-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Microsoft Fundamentals Certification Training
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <svg class="w-5 h-5 text-purple-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Personalized Certification Roadmaps
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <svg class="w-5 h-5 text-purple-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Microsoft Azure Fundamentals (AZ-900)
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <svg class="w-5 h-5 text-purple-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Microsoft Security Fundamentals (SC-900)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-100 to-purple-50 p-8 rounded-lg">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">What I Offer:</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">1</div>
+                            <div class="ml-4">
+                                <h5 class="font-semibold text-gray-800">Personalized Study Plans</h5>
+                                <p class="text-gray-600">Tailored roadmaps based on your goals and schedule</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">2</div>
+                            <div class="ml-4">
+                                <h5 class="font-semibold text-gray-800">One-on-One Sessions</h5>
+                                <p class="text-gray-600">Focused attention on your specific challenges</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">3</div>
+                            <div class="ml-4">
+                                <h5 class="font-semibold text-gray-800">Group Sessions</h5>
+                                <p class="text-gray-600">Collaborative learning with peers studying the same cert</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">4</div>
+                            <div class="ml-4">
+                                <h5 class="font-semibold text-gray-800">Exam Strategy</h5>
+                                <p class="text-gray-600">Tips and techniques to pass with confidence</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Certifications I Coach</h2>
+                <div class="w-24 h-1 bg-purple-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">I specialize in Microsoft Fundamentals certifications, offering comprehensive coaching for these essential credentials. Additionally, I provide guidance and support for CompTIA and Cisco certification paths.</p>
+            </div>
+
+            <!-- Microsoft Certifications -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="bg-purple-600 text-white px-3 py-1 rounded mr-3">Primary Expertise</span>
+                    Microsoft Certifications
+                </h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="cert-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-blue-600 text-3xl mb-4">🎓</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">AZ-900</h4>
+                        <p class="text-gray-600 mb-4">Azure Fundamentals - Perfect starting point for cloud computing</p>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Certified Coach</span>
+                    </div>
+                    <div class="cert-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-blue-600 text-3xl mb-4">🔒</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">SC-900</h4>
+                        <p class="text-gray-600 mb-4">Security Fundamentals - Essential cybersecurity knowledge</p>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Certified Coach</span>
+                    </div>
+                    <div class="cert-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-blue-600 text-3xl mb-4">💼</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">MS-900</h4>
+                        <p class="text-gray-600 mb-4">Microsoft 365 Fundamentals - Master modern workplace tools</p>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">Available</span>
+                    </div>
+                    <div class="cert-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-blue-600 text-3xl mb-4">⚡</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">PL-900</h4>
+                        <p class="text-gray-600 mb-4">Power Platform Fundamentals - Low-code application development</p>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">Available</span>
+                    </div>
+                    <div class="cert-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-blue-600 text-3xl mb-4">🤖</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">AI-900</h4>
+                        <p class="text-gray-600 mb-4">AI Fundamentals - Introduction to artificial intelligence</p>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">Available</span>
+                    </div>
+                    <div class="cert-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-blue-600 text-3xl mb-4">📊</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">DP-900</h4>
+                        <p class="text-gray-600 mb-4">Data Fundamentals - Core data concepts and services</p>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">Available</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CompTIA & Cisco Certifications -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="bg-gray-600 text-white px-3 py-1 rounded mr-3">Additional Support</span>
+                    CompTIA & Cisco
+                </h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="cert-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-red-600 text-3xl mb-4">🛡️</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">CompTIA A+</h4>
+                        <p class="text-gray-600 mb-4">Essential IT technician certification</p>
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">Supporting Role</span>
+                    </div>
+                    <div class="cert-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-red-600 text-3xl mb-4">🌐</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">CompTIA Network+</h4>
+                        <p class="text-gray-600 mb-4">Networking fundamentals and skills</p>
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">Supporting Role</span>
+                    </div>
+                    <div class="cert-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-blue-800 text-3xl mb-4">🔧</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Cisco CCST</h4>
+                        <p class="text-gray-600 mb-4">Cisco Certified Support Technician</p>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Certified Coach</span>
+                    </div>
+                </div>
+                <div class="mt-6 bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                    <p class="text-gray-700"><strong>Note:</strong> While my primary focus and expertise is in Microsoft Fundamentals certifications, I also offer guidance and support for CompTIA and Cisco paths. For these certifications, I can help create study plans, provide resources, and offer general preparation guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Simple, Transparent Pricing</h2>
+                <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="p-8 text-center text-white">
+                        <h3 class="text-3xl font-bold mb-4">Hourly Coaching Rate</h3>
+                        <div class="text-6xl font-bold mb-4">$25<span class="text-2xl font-normal">/hour</span></div>
+                        <p class="text-purple-100 text-lg mb-8">Per client, per session</p>
+                        <a href="#contact" class="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition text-lg">Book Your First Session</a>
+                    </div>
+                    <div class="bg-white p-8">
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">What's Included:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-6 h-6 text-purple-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Personalized study plan creation and updates
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-6 h-6 text-purple-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                One-on-one coaching sessions via video call
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-6 h-6 text-purple-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Practice questions and exam strategies
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-6 h-6 text-purple-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Resource recommendations and study materials
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-6 h-6 text-purple-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Progress tracking and accountability
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-6 h-6 text-purple-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Option to join group sessions (same rate applies)
+                            </li>
+                        </ul>
+                        <div class="mt-6 bg-purple-50 p-4 rounded-lg">
+                            <p class="text-gray-700 text-sm"><strong>Flexible Scheduling:</strong> Book sessions as needed - weekly, bi-weekly, or intensive pre-exam prep. No long-term commitments required.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Get Started Today</h2>
+                <div class="w-24 h-1 bg-purple-600 mx-auto mb-4"></div>
+                <p class="text-gray-600">Ready to achieve your certification goals? Reach out and let's create your personalized roadmap!</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-purple-600 text-4xl mb-4">📧</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Email</h3>
+                    <a href="mailto:yilanoheuvels@gmail.com" class="text-purple-600 hover:underline">yilanoheuvels@gmail.com</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-purple-600 text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Phone</h3>
+                    <a href="tel:+310633704178" class="text-purple-600 hover:underline">+31 06 3370 4178</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Me a Message</h3>
+                <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email *</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Certification Interest *</label>
+                        <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600">
+                            <option value="">Select a certification</option>
+                            <option value="AZ-900">Microsoft AZ-900</option>
+                            <option value="SC-900">Microsoft SC-900</option>
+                            <option value="MS-900">Microsoft MS-900</option>
+                            <option value="PL-900">Microsoft PL-900</option>
+                            <option value="AI-900">Microsoft AI-900</option>
+                            <option value="DP-900">Microsoft DP-900</option>
+                            <option value="CompTIA A+">CompTIA A+</option>
+                            <option value="CompTIA Network+">CompTIA Network+</option>
+                            <option value="Cisco CCST">Cisco CCST</option>
+                            <option value="Other">Other / Not Sure Yet</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Message *</label>
+                        <textarea required rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600" placeholder="Tell me about your certification goals, timeline, and any questions you have..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-purple-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-purple-700 transition text-lg">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-2">&copy; 2025 YO Certification Coaching. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">Empowering IT professionals to achieve their certification dreams</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">Admin Login</h3>
+                <button onclick="hideLoginModal()" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-semibold mb-2">Username</label>
+                    <input type="text" id="username" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-semibold mb-2">Password</label>
+                    <input type="password" id="password" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600">
+                </div>
+                <div id="loginError" class="hidden mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded"></div>
+                <button type="submit" class="w-full bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard Modal -->
+    <div id="adminDashboard" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 overflow-y-auto">
+        <div class="bg-white rounded-lg p-8 max-w-4xl w-full mx-4 my-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">Admin Dashboard</h3>
+                <button onclick="logout()" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">Logout</button>
+            </div>
+            <div class="bg-purple-50 p-4 rounded-lg mb-6">
+                <p class="text-gray-700">Welcome, Admin! This is your dashboard for managing client inquiries and coaching sessions.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-lg">
+                    <div class="text-3xl mb-2">📊</div>
+                    <div class="text-2xl font-bold" id="totalClients">0</div>
+                    <div class="text-blue-100">Total Inquiries</div>
+                </div>
+                <div class="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-lg">
+                    <div class="text-3xl mb-2">✅</div>
+                    <div class="text-2xl font-bold" id="activeClients">0</div>
+                    <div class="text-green-100">Active Clients</div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-lg">
+                    <div class="text-3xl mb-2">🎓</div>
+                    <div class="text-2xl font-bold">4</div>
+                    <div class="text-purple-100">Certifications</div>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold text-gray-800 mb-4">Recent Inquiries</h4>
+                <div id="inquiriesList" class="space-y-4">
+                    <div class="text-center text-gray-500 py-8">No inquiries yet. Check back later!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Backend API URL - UPDATE THIS to your server URL when deployed
+        const API_URL = 'http://localhost:3000/api';
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Login modal functions
+        function showLoginModal() {
+            document.getElementById('loginModal').classList.remove('hidden');
+            document.getElementById('loginError').classList.add('hidden');
+        }
+
+        function hideLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+            document.getElementById('loginForm').reset();
+            document.getElementById('loginError').classList.add('hidden');
+        }
+
+        // Handle login
+        async function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch(`${API_URL}/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username, password }),
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    hideLoginModal();
+                    showAdminDashboard();
+                    loadDashboardData();
+                } else {
+                    showLoginError(data.message || 'Invalid credentials');
+                }
+            } catch (error) {
+                showLoginError('Unable to connect to server. Please try again later.');
+            }
+        }
+
+        function showLoginError(message) {
+            const errorDiv = document.getElementById('loginError');
+            errorDiv.textContent = message;
+            errorDiv.classList.remove('hidden');
+        }
+
+        function showAdminDashboard() {
+            document.getElementById('adminDashboard').classList.remove('hidden');
+        }
+
+        function logout() {
+            document.getElementById('adminDashboard').classList.add('hidden');
+        }
+
+        // Load dashboard data
+        async function loadDashboardData() {
+            try {
+                const response = await fetch(`${API_URL}/inquiries`);
+                const data = await response.json();
+
+                if (data.inquiries) {
+                    document.getElementById('totalClients').textContent = data.inquiries.length;
+                    displayInquiries(data.inquiries);
+                }
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+            }
+        }
+
+        function displayInquiries(inquiries) {
+            const container = document.getElementById('inquiriesList');
+            
+            if (inquiries.length === 0) {
+                container.innerHTML = '<div class="text-center text-gray-500 py-8">No inquiries yet. Check back later!</div>';
+                return;
+            }
+
+            container.innerHTML = inquiries.map(inquiry => `
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h5 class="font-bold text-gray-800">${inquiry.name}</h5>
+                            <p class="text-sm text-gray-600">${inquiry.email}</p>
+                        </div>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">${inquiry.certification}</span>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-2">${inquiry.message}</p>
+                    <p class="text-xs text-gray-500">${new Date(inquiry.timestamp).toLocaleString()}</p>
+                </div>
+            `).join('');
+        }
+
+        // Handle contact form submission
+        async function handleContactSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            const data = {
+                name: formData.get('name') || form.elements[0].value,
+                email: formData.get('email') || form.elements[1].value,
+                certification: formData.get('certification') || form.elements[2].value,
+                message: formData.get('message') || form.elements[3].value,
+            };
+
+            try {
+                const response = await fetch(`${API_URL}/contact`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert('Thank you for your message! I will get back to you soon.');
+                    form.reset();
+                } else {
+                    alert('There was an error sending your message. Please try again or contact me directly.');
+                }
+            } catch (error) {
+                // Fallback to mailto if server is unavailable
+                const mailtoLink = `mailto:yilanoheuvels@gmail.com?subject=Certification Coaching Inquiry - ${data.certification}&body=Name: ${data.name}%0D%0AEmail: ${data.email}%0D%0ACertification: ${data.certification}%0D%0A%0D%0AMessage:%0D%0A${data.message}`;
+                window.location.href = mailtoLink;
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html></option
